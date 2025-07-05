@@ -1,7 +1,21 @@
 import React from 'react';
+import { motion } from 'framer-motion';
 
-const ContactSection: React.FC = () => (
+interface ContentSectionProps {
+  ref: React.RefObject<HTMLDivElement | null>;
+}
+
+const ContactSection: React.FC<ContentSectionProps> = ({ref}) => (
     <>
+        <motion.div
+            ref={ref}
+            id="about"
+            className="flex flex-col md:flex-row items-center w-full scroll-mt-24"
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.3 }}
+            transition={{ duration: 0.7, ease: "easeOut" }}
+        >
         <div className="w-1/2 mx-auto p-8 flex flex-col items-center">
             <h2 className="text-5xl font-semibold mb-6">Contact Me</h2>
             <form className="space-y-2 w-full">
@@ -43,6 +57,7 @@ const ContactSection: React.FC = () => (
                 </button>
             </form>
         </div>
+        </motion.div>
     </>
 );
 
