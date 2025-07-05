@@ -1,38 +1,52 @@
 import React from 'react';
+import { motion } from 'framer-motion';
 
-const ContactSection: React.FC = () => (
+interface ContentSectionProps {
+  ref: React.RefObject<HTMLDivElement | null>;
+}
+
+const ContactSection: React.FC<ContentSectionProps> = ({ref}) => (
     <>
-        <div className="max-w-md mx-auto p-8">
-            <h2 className="text-2xl font-bold mb-6">Contact Me</h2>
-            <form className="space-y-4">
+        <motion.div
+            ref={ref}
+            id="about"
+            className="flex flex-col md:flex-row items-center w-full scroll-mt-24"
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.3 }}
+            transition={{ duration: 0.7, ease: "easeOut" }}
+        >
+        <div className="w-1/2 mx-auto p-8 flex flex-col items-center">
+            <h2 className="text-5xl font-semibold mb-6">Contact Me</h2>
+            <form className="space-y-2 w-full">
                 <div>
-                    <label className="block mb-1" htmlFor="name">Name</label>
                     <input
                         className="w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-400"
                         type="text"
                         id="name"
                         name="name"
                         required
+                        placeholder="Name"
                     />
                 </div>
                 <div>
-                    <label className="block mb-1" htmlFor="email">Email</label>
                     <input
                         className="w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-400"
                         type="email"
                         id="email"
                         name="email"
                         required
+                        placeholder="Email"
                     />
                 </div>
                 <div>
-                    <label className="block mb-1" htmlFor="message">Message</label>
                     <textarea
                         className="w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-400"
                         id="message"
                         name="message"
                         rows={4}
                         required
+                        placeholder='Message'
                     />
                 </div>
                 <button
@@ -43,6 +57,7 @@ const ContactSection: React.FC = () => (
                 </button>
             </form>
         </div>
+        </motion.div>
     </>
 );
 

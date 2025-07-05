@@ -2,9 +2,23 @@ import React from 'react';
 import ProjectCard from './ProjectCard';
 import project1Img from '../assets/project1.png';
 import project2Img from '../assets/project2.png';
+import { motion } from 'framer-motion';
 
-const ProjectsSection: React.FC = () => (
-    <div className='flex flex-col items-center gap-20'>
+interface ContentSectionProps {
+  ref: React.RefObject<HTMLDivElement | null>;
+}
+
+const ProjectsSection: React.FC<ContentSectionProps> = ({ref}) => (    
+    <motion.div
+            ref={ref}
+            id="about"
+            className="flex flex-col md:flex-row items-center w-full scroll-mt-30"
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.3 }}
+            transition={{ duration: 0.7, ease: "easeOut" }}
+        >
+    <div className='flex flex-col items-center gap-15'>
         <h2 className="text-5xl font-semibold">Projects</h2>
         <ProjectCard
             title="Budget Web App"
@@ -23,6 +37,7 @@ const ProjectsSection: React.FC = () => (
             image={project2Img} // Replace with actual image for Project Two
         />
     </div>
+    </motion.div>
 );
 
 export default ProjectsSection;

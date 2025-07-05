@@ -11,16 +11,29 @@ import mySqlSvg from '../assets/mysql.svg';
 import rubySvg from '../assets/ruby.svg';
 import javaSvg from '../assets/java.svg';
 import gradPic from '../assets/grad3.jpg';
+import { motion } from 'framer-motion';
 
-const AboutMeSection: React.FC = () => {
+interface ContentSectionProps {
+  aboutMeRef: React.RefObject<HTMLDivElement | null>;
+}
+
+const AboutMeSection: React.FC<ContentSectionProps> = ({ aboutMeRef }) => {
     // define gaps
     const gap = 20;
 
     return (
-        <div className="flex flex-col md:flex-row items-center w-full">
-            {/* Left: About Me Description */}
+        <motion.div
+            ref={aboutMeRef}
+            id="about"
+            className="flex flex-col md:flex-row items-center w-full scroll-mt-24"
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.3 }}
+            transition={{ duration: 0.7, ease: "easeOut" }}
+        >
+        <div  className="flex flex-col md:flex-row items-center w-full scroll-mt-24">
             <div className="md:w-1/2 w-full flex flex-col justify-center items-center gap-6">
-                <h2 className="text-3xl font-semibold">About Me</h2>
+                <h2 className="text-5xl font-semibold">About Me</h2>
                 <img
                     src={gradPic}
                     alt="Frank's graduation"
@@ -76,6 +89,7 @@ const AboutMeSection: React.FC = () => {
                 </div>
             </div>
         </div>
+        </motion.div>
     );
 };
 
