@@ -17,7 +17,7 @@ const ContactSection: React.FC<ContentSectionProps> = ({ref}) => (
             transition={{ duration: 0.7, ease: "easeOut" }}
         >
         <div className="w-1/2 mx-auto p-8 flex flex-col items-center">
-            <h2 className="text-5xl font-semibold mb-6">Contact Me</h2>
+            <h2 className="text-5xl font-semibold mb-6 sub-color">Contact Me</h2>
             <form className="space-y-2 w-full">
                 <div>
                     <input
@@ -51,7 +51,7 @@ const ContactSection: React.FC<ContentSectionProps> = ({ref}) => (
                 </div>
                 <button
                     type="submit"
-                    className="w-full bg-blue-600 text-white py-2 rounded hover:bg-blue-700 transition"
+                    className="w-full bg-blue-400 text-white py-2 rounded hover:bg-blue-700 transition"
                 >
                     Send Message
                 </button>
