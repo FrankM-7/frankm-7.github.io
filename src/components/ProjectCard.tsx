@@ -1,5 +1,4 @@
 import React from 'react';
-import dummyImage from '../assets/codingProjectDummy.jpg';
 
 interface ProjectCardProps {
     title: string;

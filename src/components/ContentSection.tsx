@@ -5,7 +5,7 @@ import ProjectsSection from './ProjectsSection';
 import ContactSection from './ContactSection';
 
 interface ContentSectionProps {
-  workRef: React.RefObject<HTMLElement>;
+  workRef: React.RefObject<HTMLElement | null>;
 }
 const ContentSection: React.FC<ContentSectionProps> = ({ workRef }) => (
   <section ref={workRef} className="min-h-screen">
