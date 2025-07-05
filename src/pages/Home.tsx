@@ -18,7 +18,7 @@ const Home: React.FC = () => {
         style={{ width: '100%', position: 'relative', zIndex: 1 }}
       >
         <h1 className="text-5xl md:text-6xl font-bold mb-4 relative z-10">
-          Hi, I'm SUI <span className="sub-color">Frank</span>.
+          Hi, I'm <span className="sub-color">Frank</span>.
         </h1>
         <p className="text-xl md:text-2xl mb-6 relative z-10">
           A Full-Stack Software Developer.
