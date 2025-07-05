@@ -1,5 +1,4 @@
 import React, { useRef } from 'react';
-import { Link } from 'react-router-dom';
 import AboutMeSection from './AboutMeSection';
 import ProjectsSection from './ProjectsSection';
 import ContactSection from './ContactSection';
