@@ -3,23 +3,10 @@ import react from '@vitejs/plugin-react'
 import tailwindcss from '@tailwindcss/vite'
 
 // https://vite.dev/config/
-export default defineConfig(({  }) => ({
+export default defineConfig({
+  base: "/frankm-7.github.io/",
   plugins: [
       react(),
       tailwindcss(),
   ],
-  server: {
-    hmr: {
-      port: 443,
-    },
-    host: true,
-    port: 3000,
-  },
-  build: {
-    rollupOptions: {
-      output: {
-        manualChunks: undefined,
-      },
-    },
-  },
-}))
+})
