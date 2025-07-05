@@ -10,7 +10,7 @@ import dockerSvg from '../assets/docker.svg';
 import mySqlSvg from '../assets/mysql.svg';
 import rubySvg from '../assets/ruby.svg';
 import javaSvg from '../assets/java.svg';
-import gradPic from '../assets/grad3.jpeg';
+import gradPic from '../assets/grad3.JPEG';
 
 const AboutMeSection: React.FC = () => {
     // define gaps
