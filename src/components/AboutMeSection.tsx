@@ -20,7 +20,7 @@ const AboutMeSection: React.FC = () => {
         <div className="flex flex-col md:flex-row items-center w-full">
             {/* Left: About Me Description */}
             <div className="md:w-1/2 w-full flex flex-col justify-center items-center gap-6">
-                <h2 className="text-3xl font-semibold">About Me</h2>
+                <h2 className="text-5xl font-semibold">About Me</h2>
                 <img
                     src={gradPic}
                     alt="Frank's graduation"
