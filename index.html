@@ -8,9 +8,36 @@
     
     <script type="module" crossorigin src="/assets/index-Dw2tF-Pm.js"></script>
     <link rel="stylesheet" crossorigin href="/assets/index-wu8vvfUn.css">
+    <style>
+      #vanta-bg {
+        width: 100%;
+        height: 100vh;
+        position: absolute;
+        z-index: -1;
+        top: 0;
+        left: 0;
+      }
+    </style>
   </head>
   <body>
+    <div id="vanta-bg"></div>
     <div id="root"></div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r121/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.waves.min.js"></script>
+    <script>
+      window.addEventListener("DOMContentLoaded", () => {
+        VANTA.WAVES({
+          el: "#vanta-bg",
+          mouseControls: true,
+          touchControls: true,
+          scale: 1.0,
+          scaleMobile: 1.0,
+          color: "#141414",
+          shininess: 0,
+        });
+      });
+    </script>
 
+    <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>
