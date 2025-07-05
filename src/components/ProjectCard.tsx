@@ -13,19 +13,18 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
     title,
     description,
     link,
-    bgColor = '#f87171',
     bgPosition = 'left',
     image,
 }) => {
     return (
         <div
-            className={`h-200 relative shadow-md duration-300 flex flex-col md:flex-row ${
+            className={`h-200 relative duration-300 flex flex-col md:flex-row ${
                 bgPosition === 'right' ? 'md:flex-row-reverse' : ''
             } items-center w-full`}
         >
             <div
-                className={`md:w-7/10 w-full flex flex-col justify-center items-center gap-6`}
-                style={{ backgroundColor: bgColor, height: '100%' }}
+                className={`bg-hard-color md:w-7/10 w-full flex flex-col justify-center items-center gap-6`}
+                style={{ height: '100%' }}
                 aria-hidden="true"
             >
                 <img
@@ -36,7 +35,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
             </div>
             <div
                 className={`md:w-3/10 flex justify-center flex-col ${
-                    bgPosition === 'right' ? 'translate-x-15' : '-translate-x-15'
+                    bgPosition === 'right' ? 'translate-x-10' : '-translate-x-10'
                 }`}
             >
                 <h2 className="text-4xl font-bold mb-2">{title}</h2>

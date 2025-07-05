@@ -19,13 +19,12 @@ const ProjectsSection: React.FC<ContentSectionProps> = ({ref}) => (
             transition={{ duration: 0.7, ease: "easeOut" }}
         >
     <div className='flex flex-col items-center gap-15'>
-        <h2 className="text-5xl font-semibold">Projects</h2>
+        <h2 className="text-5xl font-semibold sub-color">Projects</h2>
         <ProjectCard
             title="Budget Web App"
             description="A full-stack budgeting application built with React and Flask, featuring user authentication, expense tracking, and data storage in a MySQL database."
             link="https://example.com/project-one"
             bgPosition="right"
-            bgColor="#f87171" // Tailwind red-400
             image={project1Img}
         />
         <ProjectCard
@@ -33,7 +32,6 @@ const ProjectsSection: React.FC<ContentSectionProps> = ({ref}) => (
             description="A Discord bot developed in Python that streams music in real-time for all users in a voice channel, allowing users to queue, play, and control music playback through message commands."
             link="https://example.com/project-two"
             bgPosition="left"
-            bgColor="#60a5fa" // Tailwind blue-400
             image={project2Img} // Replace with actual image for Project Two
         />
     </div>

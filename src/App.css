@@ -48,3 +48,11 @@
 .sub-color {
   color: #A1C6EA
 }
+
+.bg-sub-color {
+  background-color: #A1C6EA;
+}
+
+.bg-hard-color {
+  background-color: #60a5fa;
+}
